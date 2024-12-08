@@ -277,15 +277,6 @@ namespace PacificEngine.OW_CheatsMod
             ModHelper.Console.WriteLine("CheatMods: Player Awakes");
         }
 
-        void OnGUI()
-        {
-            cheatsTagger.SetText("CheatsMod v" + verison + ": " + (cheatsEnabled ? "Enabled" : "Disabled"));
-            if (Locator.GetPromptManager()?.GetScreenPromptList(PromptPosition.LowerLeft)?.Contains(cheatsTagger) == false)
-            {
-                Locator.GetPromptManager().AddScreenPrompt(cheatsTagger, PromptPosition.LowerLeft, true);
-            }
-        }
-
         void Update()
         {
             inputs.Update();
